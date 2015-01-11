@@ -1,0 +1,12 @@
+title:
+  base:  "Ansible 実践入門 - Ansibleによる高速サーバ構築術(仮)"
+
+subtitle:
+  index: "サポートページ"
+  reference: "参考書籍、リンク"
+
+
+links:
+  - { name: "書籍情報",       sub: "Publisher Information",    href: "http://www.google.com",    icon: "icon-book"}
+  - { name: "コードサンプル",  sub: "Download Code Sample", href: "./code-sample.html",       icon: "icon-tasks"}
+  - { name: "リンク、参考書籍",sub: "Link to Reference", href: "./buy-book-reference.html",icon: "icon-star"}

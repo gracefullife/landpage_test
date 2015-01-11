@@ -1,0 +1,8 @@
+- name:  Ansible 本のランディングページ生成
+  hosts: local
+  gather_facts: no
+  tasks:
+  - template: src=templates/{{item}}
+              dest=./
+    with_items:
+    - index.html

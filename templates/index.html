@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Ansible 実践入門 - Ansibleによる高速サーバ構築術(仮)</title>
+    <title>{{ title.base}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Booky - a perfect responsive landing page to sell/share your books online.">
     <meta name="author" content="rajendra prasad">
@@ -92,28 +92,16 @@
             </div>
         <div class="span12">
             <ul class="thumbnails">
-                                <li class="span4">
-                    <a href="http://www.google.com" title="書籍情報" class="thumbnail">
-                        <span><i class="icon-5x icon-book"></i></span>
+                {% for item in links %}
+                <li class="span4">
+                    <a href="{{ item.href}}" title="{{ item.name }}" class="thumbnail">
+                        <span><i class="icon-5x {{item.icon}}"></i></span>
 
-                        <p><b>書籍情報</b><br/>出版社情報</p>
+                        <p><b>{{ item.name }}</b><br/>{{ item.sub }}</p>
                     </a>
                 </li>
-                                <li class="span4">
-                    <a href="./code-sample.html" title="コードサンプル" class="thumbnail">
-                        <span><i class="icon-5x icon-tasks"></i></span>
-
-                        <p><b>コードサンプル</b><br/>出版社情報</p>
-                    </a>
-                </li>
-                                <li class="span4">
-                    <a href="./buy-book-reference.html" title="リンク、参考書籍" class="thumbnail">
-                        <span><i class="icon-5x icon-star"></i></span>
-
-                        <p><b>リンク、参考書籍</b><br/>出版社情報</p>
-                    </a>
-                </li>
-                            </ul>
+                {% endfor %}
+            </ul>
         </div>
         <!--/span12-->
     </div>
