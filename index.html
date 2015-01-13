@@ -144,11 +144,28 @@
 
 </script>
 <script type="text/javascript">
-    $(function () {
+
+    resize_trendgraph = function () {
         trend_graph = $("iframe");
         parent_width = trend_graph.parent().width();
         trend_graph.width(parent_width);
+    };
+    $(function () {
+        trend_graph = $("iframe");
+        trend_graph.height(trend_graph.height + 10);
+        resize_trendgraph()
     })
+
+    var timer = false;
+    $(window).resize(function () {
+        if (timer !== false) {
+            clearTimeout(timer);
+        }
+        timer = setTimeout(function () {
+            resize_trendgraph()
+        }, 200);
+    });
+
 
 </script>
 </body>
