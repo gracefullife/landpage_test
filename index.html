@@ -84,12 +84,12 @@
         </div>
         <!--/span12-->
         <div class="clearfix"></div>
-            <div class="span12 text-center" style="background-color: #ffffff;">
-                <p>Ansible は、今もっとも勢いのある/実用的な Provisioning ツールです。</p>
-                <script type="text/javascript"
-                        src="//www.google.com/trends/embed.js?hl=ja&cat=0-5&q=Ansible,+puppet,+chef+solo,+chef+server&geo=JP&date=1/2013+36m&cmpt=q&tz&tz&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=800&h=330"></script>
+        <div class="span12 text-center" style="background-color: #ffffff;">
+            <p>Ansible は、今もっとも勢いのある/実用的な Provisioning ツールです。</p>
+            <script type="text/javascript"
+                    src="//www.google.com/trends/embed.js?hl=ja&cat=0-5&q=Ansible,+puppet,+chef+solo,+chef+server&geo=JP&date=1/2013+36m&cmpt=q&tz&tz&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=800&h=330"></script>
 
-            </div>
+        </div>
         <div class="span12">
             <ul class="thumbnails">
                                 <li class="span4">
@@ -141,6 +141,14 @@
 
     ga('create', 'UA-35007924-4', 'auto');
     ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+    $(function () {
+        trend_graph = $("iframe");
+        parent_width = trend_graph.parent().width();
+        trend_graph.width(parent_width);
+    })
 
 </script>
 </body>

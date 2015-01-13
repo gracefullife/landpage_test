@@ -6,3 +6,4 @@
               dest=./
     with_items:
     - index.html
+    - buy-book-reference.html
