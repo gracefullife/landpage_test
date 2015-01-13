@@ -138,10 +138,15 @@
         parent_width = trend_graph.parent().width();
         trend_graph.width(parent_width);
         trend_graph.height(trend_graph.height()+10);
-        trend_graph.parent().height(trend_graph.height()+10);
+        trend_graph.parent().height(trend_graph.height()+20);
     };
     $(window).ready(function () {
-        resize_trendgraph()
+        if (timer !== false) {
+            clearTimeout(timer);
+        }
+        timer = setTimeout(function () {
+            resize_trendgraph()
+        }, 200);
     })
     var timer = false;
     $(window).resize(function () {
